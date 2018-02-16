@@ -1,0 +1,21 @@
+chaos_company_admin_add_post:
+    path: /add
+    defaults: { _controller: ChaosCompanyAdminBundle:Post:add }
+
+chaos_company_admin_edit_post:
+    path: /{id}/edit
+    defaults: { _controller: ChaosCompanyAdminBundle:Post:edit }
+    requirements:
+        id: '\d+'
+
+chaos_company_admin_delete_post:
+    path: /{id}/delete
+    defaults: { _controller: ChaosCompanyAdminBundle:Post:delete }
+
+chaos_company_admin_show_post:
+    path: /{id}/show
+    defaults: { _controller: ChaosCompanyAdminBundle:Post:show }
+
+chaos_company_admin_list_post:
+    path: /list
+    defaults: { _controller: ChaosCompanyAdminBundle:Post:list }

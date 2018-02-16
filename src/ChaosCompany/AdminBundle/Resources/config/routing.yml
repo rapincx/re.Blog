@@ -1,0 +1,19 @@
+chaos_company_admin_homepage:
+    path: /dashboard
+    defaults: { _controller: ChaosCompanyAdminBundle:Default:index }
+
+chaos_company_post:
+    resource: "@ChaosCompanyAdminBundle/Resources/config/post.yml"
+    prefix:   /post
+
+chaos_company_category:
+    resource: "@ChaosCompanyAdminBundle/Resources/config/category.yml"
+    prefix:   /category
+
+chaos_company_tag:
+    resource: "@ChaosCompanyAdminBundle/Resources/config/tag.yml"
+    prefix:   /tag
+
+#chaos_company_comment:
+#   resource: "@ChaosCompanyAdminBundle/Resources/config/comment.yml"
+#   prefix:   /comment

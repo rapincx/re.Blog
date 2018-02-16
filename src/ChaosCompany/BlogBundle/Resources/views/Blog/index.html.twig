@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<!-- title -->
+		<title>Mate Blog|Responsive HTML5 Template</title>
+		
+		<!-- meta Data -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		
+		<!-- stylesheet -->
+		<link href="{{ asset('bundles/chaoscompanyblog/assets/css/bootstrap.min.css') }}" rel="stylesheet">
+		<link href="{{ asset('bundles/chaoscompanyblog/assets/css/font-awesome.min.css') }}" rel="stylesheet">
+		<link href="{{ asset('bundles/chaoscompanyblog/assets/css/gap-icons.css') }}" rel="stylesheet">
+		<link href="{{ asset('bundles/chaoscompanyblog/assets/css/owl.carousel.css') }}" rel="stylesheet">
+		<link href="{{ asset('bundles/chaoscompanyblog/assets/css/owl.theme.css') }}" rel="stylesheet">
+		<link href="{{ asset('bundles/chaoscompanyblog/assets/css/owl.transitions.css') }}" rel="stylesheet">
+		<link href="{{ asset('bundles/chaoscompanyblog/assets/css/magnific-popup.css') }}" rel="stylesheet">
+		<link href="{{ asset('bundles/chaoscompanyblog/assets/css/animate.css') }}" rel="stylesheet">
+		
+		<!-- custom Stylesheet -->
+		<link href="{{ asset('bundles/chaoscompanyblog/assets/css/main.css') }}" rel="stylesheet">
+		
+		<!-- responsive -->
+		<link href="{{ asset('bundles/chaoscompanyblog/assets/css/responsive.css') }}" rel="stylesheet">
+		
+		<!-- google Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Rufina%7cfamily=Lato' rel='stylesheet' type='text/css'>
+		
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="{{ asset('bundles/chaoscompanyblog/assets/js/html5shiv.min.js') }}"></script>
+		<script src="{{ asset('bundles/chaoscompanyblog/assets/js/respond.min.js') }}"></script>
+		<![endif]-->
+	</head>
+	<body>
+		{{ include('@ChaosCompanyBlog/includes/header.html.twig') }}
+		
+		{{ include('@ChaosCompanyBlog/includes/slider.html.twig') }}
+		
+		<!-- main-wrapper start -->
+		<div class="main-wrapper">
+			<div class="padding-50">
+				<div class="container">
+					<div class="row">
+					<div class="masonary-two-column-container">
+						{% for post in posts %}
+							<div class="masonary-item-two-column">
+								<article class="post-single post-style-1">
+									<div class="post-thumb ps-rel">
+										<a href="{{ path('chaos_company_blog_post_slug', {'slug': post.slug}) }}">
+											<img src="{{ asset('bundles/chaoscompanyblog/images/1.jpg') }}" alt="img" class="img-responsive">
+										</a>
+										<div class="post-rate">
+											<i class="fa fa-star-o" aria-hidden="true"></i>
+										</div>
+										<div class="post-type">
+											<span class="icon icon-Picture"></span>
+										</div>
+									</div>
+									<div class="post-wrapper-skw ps-rel">
+										<div class="post-wrapper">
+											<div class="post-meta-data">
+												<div>
+													<span class="post-catagory"><a href="#">{{ post.category }}</a></span>
+													<span class="post-date">{{ post.createdAt|date("d M Y") }}</span>
+												</div>
+											</div>
+											<div class="post-title">
+												<h3>
+													<a href="{{ path('chaos_company_blog_post_slug', {'slug': post.slug}) }}">{{ post.title }}</a>
+												</h3>
+											</div>
+											<div class="post-entry">
+												<p>
+													Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+												</p>
+											</div>
+											<div class="blog-footer">
+												<div class="blog-footer-content blog-btn">
+													<a href="{{ path('chaos_company_blog_post_slug', {'slug': post.slug}) }}" class="read-more-btn">Read More</a>
+												</div>
+												<div class="blog-footer-content share-social">
+													<div class="slide-content-area share-area ps-rel">
+														<span class="icon icon-Share"></span>
+														<div class="slide-element">
+															<ul class="inline-list">
+																<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+																<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+																<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+																<li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+															</ul>
+														</div>
+													</div>
+												</div>
+												<div class="blog-footer-content post-comment-meta">
+													<span class="comments-no"><i class="fa fa-comment-o"></i> 15</span>
+													<span class="post-impress"><i class="fa fa-heart-o"></i> 51</span>
+												</div>
+											</div>
+										</div><!-- /.post-wrapper -->
+									</div>
+								</article><!-- /.post-single -->
+							</div><!-- /.masonary-item-two-column -->
+						{% endfor %}
+					</div><!-- /.masonary-two-column-container-->
+					</div>
+				</div><!-- /.container -->
+				<div class="text-center pagination-area">
+                    {{ knp_pagination_render(posts) }}
+				</div><!-- /.pagination-area -->
+			</div>
+		</div>
+		<!-- main-wrapper end -->
+		{{ include('@ChaosCompanyBlog/includes/footer.html.twig') }}
+		<!-- script -->
+		<script src="{{ asset('bundles/chaoscompanyblog/assets/js/jquery-2.2.3.min.js') }}"></script>
+		<script src="{{ asset('bundles/chaoscompanyblog/assets/js/bootstrap.min.js') }}"></script>
+		<script src="{{ asset('bundles/chaoscompanyblog/assets/js/owl.carousel.min.js') }}"></script>
+		<script src="{{ asset('bundles/chaoscompanyblog/assets/js/jquery.magnific-popup.min.js') }}"></script>
+		<script src="{{ asset('bundles/chaoscompanyblog/assets/js/circle-progress.js') }}"></script>
+		<script src="{{ asset('bundles/chaoscompanyblog/assets/js/progressv-custom.js') }}"></script>
+		<script src="{{ asset('bundles/chaoscompanyblog/assets/js/masonry.pkgd.min.js') }}"></script>
+		<script src="{{ asset('bundles/chaoscompanyblog/assets/js/imagesloaded.pkgd.min.js') }}"></script>
+		
+		<!-- slider-1-custom- -->
+		<script src="{{ asset('bundles/chaoscompanyblog/assets/js/slider-1-custom.js') }}"></script>
+		
+		<!-- custom-file -->
+		<script src="{{ asset('bundles/chaoscompanyblog/assets/js/custom.js') }}"></script>
+	</body>
+</html>

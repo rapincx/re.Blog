@@ -1,0 +1,133 @@
+{% extends 'ChaosCompanyAdminBundle:layouts:base.html.twig' %}
+
+{% block stylesheet %}
+    <link href="{{ asset('bundles/chaoscompanyadmin/assets/plugins/pace/pace-theme-flash.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/chaoscompanyadmin/assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/chaoscompanyadmin/assets/plugins/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/chaoscompanyadmin/assets/plugins/jquery-scrollbar/jquery.scrollbar.css') }}" rel="stylesheet" media="screen">
+    <link href="{{ asset('bundles/chaoscompanyadmin/assets/plugins/select2/css/select2.min.css') }}" rel="stylesheet"
+          media="screen">
+    <link href="{{ asset('bundles/chaoscompanyadmin/assets/plugins/switchery/css/switchery.min.css') }}"
+          rel="stylesheet" media="screen">
+    <link href="{{ asset('bundles/chaoscompanyadmin/assets/plugins/bootstrap3-wysihtml5/bootstrap3-wysihtml5.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/chaoscompanyadmin/assets/plugins/bootstrap-tag/bootstrap-tagsinput.css') }}"
+          rel="stylesheet">
+    <link href="{{ asset('bundles/chaoscompanyadmin/assets/plugins/dropzone/css/dropzone.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/chaoscompanyadmin/assets/plugins/bootstrap-datepicker/css/datepicker3.css') }}" rel="stylesheet" media="screen">
+    <link href="{{ asset('bundles/chaoscompanyadmin/assets/plugins/summernote/css/summernote.css') }}" rel="stylesheet"
+          media="screen">
+    <link href="{{ asset('bundles/chaoscompanyadmin/assets/plugins/bootstrap-daterangepicker/daterangepicker-bs3.css') }}" rel="stylesheet" media="screen">
+    <link href="{{ asset('bundles/chaoscompanyadmin/assets/plugins/bootstrap-timepicker/bootstrap-timepicker.min.css') }}" rel="stylesheet" media="screen">
+    <link href="{{ asset('bundles/chaoscompanyadmin/pages/css/pages-icons.css') }}" rel="stylesheet">
+    <link class="main-stylesheet" href="{{ asset('bundles/chaoscompanyadmin/pages/css/pages.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <div class="col-md-12">
+        <div class="card card-borderless">
+            <ul class="nav nav-tabs nav-tabs-simple" role="tablist" data-init-reponsive-tabs="dropdownfx">
+                <li class="nav-item">
+                    <a class="active" data-toggle="tab" role="tab" data-target="#tab2hellowWorld" href="#">General</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" data-toggle="tab" role="tab" data-target="#tab2FollowUs">SEO Settings</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab2hellowWorld">
+                    <div class="column-seperation">
+                        {{ form_start(form) }}
+                        <div class="container container-fixed-lg">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="card card-default">
+                                        <div class="card-block no-scroll card-toolbar">
+                                            <div class="form-group form-group-default required">
+                                                {{ form_label(form.title) }}
+                                                {{ form_widget(form.title, {
+                                                    'attr' : {
+                                                        'class' : 'form-control'
+                                                    }
+                                                }) }}
+                                                {{ form_errors(form.title) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary" formnovalidate>Save</button>
+                            </div>
+                        </div>
+                        {{ form_end(form) }}
+                    </div>
+                </div>
+                <div class="tab-pane " id="tab2FollowUs">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h3>“ Nothing is
+                                <span class="semi-bold">impossible</span>, the word itself says 'I'm
+                                <span class="semi-bold">possible</span>'! ”
+                            </h3>
+                            <p>A style represents visual customizations on top of a layout. By editing a style, you can use Squarespace's visual interface to customize your...</p>
+                            <br>
+                            <p class="pull-right">
+                                <button type="button" class="btn btn-default btn-cons">White</button>
+                                <button type="button" class="btn btn-success btn-cons">Success</button>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/feather-icons/feather.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/pace/pace.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/jquery/jquery-1.11.1.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/modernizr.custom.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/tether/js/tether.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/jquery/jquery-easy.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/jquery-unveil/jquery.unveil.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/jquery-ios-list/jquery.ioslist.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/jquery-actual/jquery.actual.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/select2/js/select2.full.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/classie/classie.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/switchery/js/switchery.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/bootstrap3-wysihtml5/bootstrap3-wysihtml5.all.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/jquery-autonumeric/autoNumeric.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/dropzone/dropzone.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/bootstrap-tag/bootstrap-tagsinput.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/jquery-inputmask/jquery.inputmask.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/bootstrap-form-wizard/js/jquery.bootstrap.wizard.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/jquery-validation/js/jquery.validate.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/summernote/js/summernote.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/moment/moment.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/bootstrap-timepicker/bootstrap-timepicker.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/bootstrap-typehead/typeahead.bundle.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/bootstrap-typehead/typeahead.jquery.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/handlebars/handlebars-v4.0.5.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/pages/js/pages.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/js/form_elements.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/js/scripts.js') }}"></script>
+    <script>
+        (function($) {
+            $(document).ready(function() {
+                $('.summernote').summernote({
+                    height: 200,
+                    onfocus: function(e) {
+                        $('body').addClass('overlay-disabled');
+                    },
+                    onblur: function(e) {
+                        $('body').removeClass('overlay-disabled');
+                    }
+                });
+            });
+        })(window.jQuery);
+    </script>
+{% endblock %}

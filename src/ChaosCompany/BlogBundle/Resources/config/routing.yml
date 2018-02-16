@@ -1,0 +1,33 @@
+chaos_company_blog_homepage:
+    path:     /
+    defaults: { _controller: ChaosCompanyBlogBundle:Default:index }
+
+chaos_company_blog_post_slug:
+    path: /post/{slug}
+    defaults: { _controller: ChaosCompanyBlogBundle:Post:viewPost }
+    requirements:
+        slug: .+
+
+chaos_company_blog_post_all:
+    path: /post/all
+    defaults: { _controller: ChaosCompanyBlogBundle:Post:getAllPost }
+
+chaos_company_blod_category_slug:
+    path: /category/{slug}
+    defaults: { _controller: ChaosCompanyBlogBundle:Category:getPostsFromCategory }
+    requirements:
+        slug: .+
+
+chaos_company_blod_tag_slug:
+    path: /tag/{slug}
+    defaults: { _controller: ChaosCompanyBlogBundle:Tag:getPostsFromTag }
+    requirements:
+        slug: .+
+
+chaos_company_blog_security_login:
+    path: /login
+    defaults: { _controller: ChaosCompanyBlogBundle:Security:login }
+
+chaos_company_blog_security_logout:
+    path: /logout
+    defaults: { _controller: ChaosCompanyBlogBundle:Security:logout }

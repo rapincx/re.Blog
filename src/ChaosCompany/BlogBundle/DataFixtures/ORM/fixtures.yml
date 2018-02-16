@@ -1,0 +1,24 @@
+ChaosCompany\BlogBundle\Entity\User:
+    user_{1..10}:
+        email: godmail+<current()>@gmail.com
+        plainPassword: pass+<current()>
+        roles: ['ROLE_ADMIN']
+
+ChaosCompany\BlogBundle\Entity\Category:
+    category_{1..5}:
+        title: <sentence(2, true)>
+        description: <paragraph()>
+        posts: ['@post_*']
+
+ChaosCompany\BlogBundle\Entity\Tag:
+    tag_{1..10}:
+        title: <word()>
+
+ChaosCompany\BlogBundle\Entity\Post:
+    post_{1..40}:
+        title: <sentence(6, true)>
+        content: <text(1000)>
+        category: '@category_*'
+        user: '@user_*'
+        isPublished: 1
+        postType: post

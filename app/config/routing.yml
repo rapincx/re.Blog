@@ -1,0 +1,7 @@
+chaos_company_admin:
+    resource: "@ChaosCompanyAdminBundle/Resources/config/routing.yml"
+    prefix:   /admin/
+
+chaos_company_blog:
+    resource: "@ChaosCompanyBlogBundle/Resources/config/routing.yml"
+    prefix:   /

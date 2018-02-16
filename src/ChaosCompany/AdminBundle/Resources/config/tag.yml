@@ -1,0 +1,19 @@
+chaos_company_admin_add_tag:
+    path: /add
+    defaults: { _controller: ChaosCompanyAdminBundle:Tag:add }
+
+chaos_company_admin_edit_tag:
+    path: /{id}/edit
+    defaults: { _controller: ChaosCompanyAdminBundle:Post:edit }
+
+chaos_company_admin_delete_tag:
+    path: /{id}/delete
+    defaults: { _controller: ChaosCompanyAdminBundle:Post:delete }
+
+chaos_company_admin_show_tag:
+    path: /{id}/show
+    defaults: { _controller: ChaosCompanyAdminBundle:Post:show }
+
+chaos_company_admin_list_tag:
+    path: /list
+    defaults: { _controller: ChaosCompanyAdminBundle:Tag:list }

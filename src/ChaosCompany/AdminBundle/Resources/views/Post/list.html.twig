@@ -1,0 +1,91 @@
+{% extends '@ChaosCompanyAdmin/layouts/base.html.twig' %}
+
+{% block stylesheet %}
+    <link href="{{ asset('bundles/chaoscompanyadmin/assets/plugins/pace/pace-theme-flash.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/chaoscompanyadmin/assets/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/chaoscompanyadmin/assets/plugins/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/chaoscompanyadmin/assets/plugins/jquery-scrollbar/jquery.scrollbar.css') }}" rel="stylesheet" media="screen">
+    <link href="{{ asset('bundles/chaoscompanyadmin/assets/plugins/select2/css/select2.min.css') }}" rel="stylesheet" media="screen">
+    <link href="{{ asset('bundles/chaoscompanyadmin/assets/plugins/switchery/css/switchery.min.css') }}" rel="stylesheet" media="screen">
+    <link href="{{ asset('bundles/chaoscompanyadmin/assets/plugins/jquery-datatable/media/css/dataTables.bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/chaoscompanyadmin/assets/plugins/jquery-datatable/extensions/FixedColumns/css/dataTables.fixedColumns.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/chaoscompanyadmin/assets/plugins/datatables-responsive/css/datatables.responsive.css') }}" rel="stylesheet" media="screen">
+    <link href="{{ asset('bundles/chaoscompanyadmin/pages/css/pages-icons.css') }}" rel="stylesheet" type="text/css">
+    <link class="main-stylesheet" href="{{ asset('bundles/chaoscompanyadmin/pages/css/pages.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+    <!-- START card -->
+    <div class="card card-transparent">
+            <div class="card-header  d-flex justify-content-between">
+                <div class="card-title">Posts List
+                </div>
+                <div class="export-options-container"></div>
+            </div>
+            <div class="card-block">
+                <table class="table table-striped" id="tableWithExportOptions">
+                    <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Image</th>
+                        <th>User</th>
+                        <th>Post Type</th>
+                        <th>Action</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for post in posts %}
+                        <tr>
+                            <td>{{ post.title }}</td>
+                            <td style="max-height: 200px">Demo Description</td>
+                            <td class="center">
+                                {% if(post.imageName) %}
+                                    <img src="{{ vich_uploader_asset(post, 'imageFile') }}" alt="{{ post.title }}" />
+                                {% else %}
+                                    <p>Not Image</p>
+                                {% endif %}
+                            </td>
+                            <td>{{ post.user }}</td>
+                            <td class="center">{{ post.postType }}</td>
+                            <td><a href="{{ url('chaos_company_admin_edit_post', {'id': post.id}) }}">Edit</a></td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    <!-- END card -->
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/feather-icons/feather.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/pace/pace.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/jquery/jquery-1.11.1.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/modernizr.custom.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/tether/js/tether.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/jquery/jquery-easy.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/jquery-unveil/jquery.unveil.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/jquery-ios-list/jquery.ioslist.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/jquery-actual/jquery.actual.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/jquery-scrollbar/jquery.scrollbar.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/select2/js/select2.full.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/classie/classie.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/switchery/js/switchery.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/jquery-datatable/media/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/jquery-datatable/extensions/TableTools/js/dataTables.tableTools.min.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/jquery-datatable/media/js/dataTables.bootstrap.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/jquery-datatable/extensions/Bootstrap/jquery-datatable-bootstrap.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/datatables-responsive/js/datatables.responsive.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/plugins/datatables-responsive/js/lodash.min.js') }}"></script>
+    <!-- END VENDOR JS -->
+    <!-- BEGIN CORE TEMPLATE JS -->
+    <script src="{{ asset('bundles/chaoscompanyadmin/pages/js/pages.min.js') }}"></script>
+    <!-- END CORE TEMPLATE JS -->
+    <!-- BEGIN PAGE LEVEL JS -->
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/js/datatables.js') }}"></script>
+    <script src="{{ asset('bundles/chaoscompanyadmin/assets/js/scripts.js') }}"></script>
+    <!-- END PAGE LEVEL JS -->
+{% endblock %}

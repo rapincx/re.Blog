@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<!-- title -->
+		<title>Mate Blog|Responsive HTML5 Template</title>
+		
+		<!-- meta Data -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		
+		<!-- stylesheet -->
+		<link href="{{ asset('bundles/chaoscompanyblog/assets/css/bootstrap.min.css') }}" rel="stylesheet">
+		<link href="{{ asset('bundles/chaoscompanyblog/assets/css/font-awesome.min.css') }}" rel="stylesheet">
+		<link href="{{ asset('bundles/chaoscompanyblog/assets/css/gap-icons.css') }}" rel="stylesheet">
+		<link href="{{ asset('bundles/chaoscompanyblog/assets/css/owl.carousel.css') }}" rel="stylesheet">
+		<link href="{{ asset('bundles/chaoscompanyblog/assets/css/owl.theme.css') }}" rel="stylesheet">
+		<link href="{{ asset('bundles/chaoscompanyblog/assets/css/owl.transitions.css') }}" rel="stylesheet">
+		<link href="{{ asset('bundles/chaoscompanyblog/assets/css/magnific-popup.css') }}" rel="stylesheet">
+		
+		<!-- custom Stylesheet -->
+		<link href="{{ asset('bundles/chaoscompanyblog/assets/css/main.css') }}" rel="stylesheet">
+		
+		<!-- responsive -->
+		<link href="{{ asset('bundles/chaoscompanyblog/assets/css/responsive.css') }}" rel="stylesheet">
+		
+		<!-- google Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Rufina%7cfamily=Lato' rel='stylesheet' type='text/css'>
+		
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="{{ asset('bundles/chaoscompanyblog/assets/js/html5shiv.min.js') }}"></script>
+		<script src="{{ asset('bundles/chaoscompanyblog/assets/js/respond.min.js') }}"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<!-- header start -->
+		<header id="home">
+			<div class="navbar-default navbar-fixed-top">
+				<!-- Main-nav -->
+				<nav class="navbar navbar-home">
+					<div class="container">
+						<!-- Navbar Brand -->
+						<div class="navbar-header">
+							<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#matblog-navbar-1" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>
+						</div>
+						<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="matblog-navbar-1">
+							<ul class="nav navbar-nav">
+								<li class="active has-sub-menu">
+									<a href="index.html">HOME <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+									<span class="sub-trigger"></span>
+									<ul class="sub-menu">
+										<li><a href="home-2.html">BLOG MASONRY</a></li>
+										<li><a href="home-3.html">BLOG LIST</a></li>
+										<li><a href="home-4.html">BLOG GRID</a></li>
+										<li><a href="home-5.html">BLOG FEATURED</a></li>
+									</ul>
+								</li>
+								<li class="has-sub-menu">
+									<a href="#">PAGES <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+									<span class="sub-trigger"></span>
+									<ul class="sub-menu">
+										<li><a href="single-left-sidebar.html">SINGLE LEFT SIDEBAR</a></li>
+										<li><a href="single.html">SINGLE RIGHT SIDEBAR</a></li>
+									</ul>
+								</li>
+								<li><a href="about.html">ABOUT</a></li>
+								<li><a href="contact.html">CONTACT</a></li>
+							</ul>
+							
+							<form action="#" method="get" class="navbar-form navbar-right">
+								<input type="text" class="form-control" placeholder="Enter Keyword">
+								<button type="submit" class="btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
+							</form>
+							<ul class="navbar-social social-solid inline-list navbar-right">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								<li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+								<li><a href="#"><i class="fa fa-rss"></i></a></li>
+							</ul>
+						</div><!-- /.navbar-collapse -->
+						<div class="nav-logo-default">
+							<a href="index.html"><img src="images/misc/18.png" alt="image" class="img-responsive"></a>
+						</div><!-- /.nav-logo-default -->
+						<div class="nav-logo-default-small">
+							<a href="index.html"><img src="images/misc/19.png" alt="image" class="img-responsive"></a>
+						</div><!-- /.nav-logo-default-small --> 
+					</div><!-- /.container-fluid -->
+				</nav><!-- /.main-nav -->
+			</div>
+		</header>
+		<!-- header end -->
+		<div class="sub-header single-right-sidebar">
+			<div class="container">
+				<div class="breadcrumb">
+					<span>BLOG DETAILS</span>
+				</div>
+			</div>
+		</div>
+		<!-- main-wrapper start -->
+		<div class="main-wrapper">
+			<div class="padding-80">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8">
+							<article class="blog-post-single">
+								<div class="post-thumb ps-rel">
+									<a href="#"><img src="{{ asset('bundles/chaoscompanyblog/images/1.jpg') }}"
+													 alt="img"
+													 class="img-responsive"></a>
+									<div class="post-rate">
+										<i class="fa fa-star-o" aria-hidden="true"></i>
+									</div>
+									<div class="post-type">
+										<span class="icon icon-Picture"></span>
+									</div>
+								</div>
+								<div class="post-wrapper post-wrapper-skw ps-rel">
+									<div class="post-meta-data">
+										<div>
+											<span class="post-catagory">
+												{% if post.category %}
+													<a href="/category/{{ post.category.slug }}">{{ post.category.title
+														}}</a>
+												{% endif %}
+											</span>
+											<span class="post-date">{{ post.createdAt|date("d M Y") }}</span>
+										</div>
+									</div>
+									<div class="post-title">
+										<h3><a href="#">{{ post.title }}</a></h3>
+									</div>
+									<div class="post-entry">
+										{{ post.content|raw }}
+									</div>
+									<div class="blog-single-footer">
+										<div class="blog-footer-content share-social">
+											<div class="slide-content-area share-area ps-rel">
+												<span class="icon icon-Share"></span>
+												<div class="slide-element">
+													<ul class="inline-list">
+														<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+														<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+														<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+														<li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+										<div class="blog-footer-content post-comment-meta">
+											<span class="comments-no"><i class="fa fa-comment-o"></i> 15</span>
+											<span class="post-impress"><i class="fa fa-heart-o"></i> 51</span>
+										</div>
+										<div class="blog-footer-content widget_tags">
+											{% if(post.tags) %}
+											<span>Tag:</span>
+											<ul>
+												{% for tag in post.tags %}
+												<li><a href="{{ tag.slug }}">{{ tag.title }}</a></li>
+												{% endfor %}
+											</ul>
+											{% endif %}
+										</div>
+									</div>
+								</div><!-- /.post-wrapper -->
+							</article><!-- /.post-single -->
+							<div class="post-author">
+								<img src="images/misc/14.png" alt="img" class="img-responsive post-author-img">
+								<div class="author-info">
+									<div class="author-info-top">
+										<h5>ALEX HUNNY</h5>
+										<ul class="social-solid-self-color inline-list">
+											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+											<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+											<li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+										</ul>
+									</div>
+									<p>
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley.
+									</p>
+								</div>
+								<div class="clearfix"></div>
+							</div><!-- /.post-author -->
+							<div class="comment-area single-box">
+								<div class="section-title ps-rel">
+									<h2>COMMENTS</h2>
+								</div>
+								<div class="comment-list">
+									<ul>
+										<li>
+											<div class="media">
+												<div class="media-left">
+													<div class="comment-thumb">
+														<img class="img-responsive" src="images/misc/15.png" alt>
+													</div>
+												</div>
+												<div class="media-body">
+													<div class="comment-info">
+														<h5><a href="">RUFINA ALO</a><span class="comment_date">15 May,  2015</span></h5>
+														<p>Remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software</p>
+														<a href="#">
+															<div class="slide-content-area replay-btn ps-rel">
+																<i class="fa fa-reply" aria-hidden="true"></i>
+																<h6 class="slide-element replay-text">Replay</h6>
+															</div>
+														</a>
+													</div>
+												</div>
+											</div> 
+											<ul>
+												<li>
+													<div class="media">
+														<div class="media-left">
+															<div class="child-li">
+																<div class="comment-thumb">
+																	<img class="img-responsive" src="images/misc/16.png" alt>
+																</div>
+															</div>
+														</div>
+														<div class="media-body">
+															<div class="comment-info">
+																<h5><a href="">AL NAFIS</a><span class="comment_date">15 May,  2015</span></h5>
+																<p>Temaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing</p>
+																<a href="#">
+																	<div class="slide-content-area replay-btn ps-rel">
+																		<i class="fa fa-reply" aria-hidden="true"></i>
+																		<h6 class="slide-element replay-text">Replay</h6>
+																	</div>
+																</a>
+															</div>
+														</div>
+													</div>                                                
+												</li>
+											</ul>                                       
+										</li>
+										<li>
+											<div class="media last">
+												<div class="media-left">
+													<div class="comment-thumb">
+														<img class="img-responsive" src="images/misc/17.png" alt>
+													</div>
+												</div>
+												<div class="media-body last">
+													<div class="comment-info">
+														<h5><a href="">ALEX HUNNY</a><span class="comment_date">15 May,  2015</span></h5>
+														<p>Remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages</p>
+														<a href="#">
+															<div class="slide-content-area replay-btn ps-rel">
+																<i class="fa fa-reply" aria-hidden="true"></i>
+																<h6 class="slide-element replay-text">Replay</h6>
+															</div>
+														</a>
+													</div>
+												</div>  
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div><!-- /.comment-area -->
+							<div class="comment-form-area single-box last">
+								<div class="section-title ps-rel">
+									<h2>POST COMMENTS</h2>
+								</div>
+								<form action="#" method="get" class="form-common">
+									<div class="input-field text">
+										<span class="icon icon-User input-icon"></span>
+										<input type="text" name="name" placeholder="Jhon Doe">
+									</div>
+									<div class="input-field email">
+										<span class="icon icon-Mail input-icon"></span>
+										<input type="email" name="email" placeholder="Email">
+									</div>
+									<div class="input-field textarea">
+										<span class="icon icon-Mail input-icon"></span>
+										<textarea rows="5" cols="25" id="a" placeholder="Message"></textarea>
+									</div>
+									<div class="text-left comment-btn">
+										<input type="submit" value="Submit">
+									</div>
+								</form>
+							</div><!-- /.comment-form-area -->
+						</div><!-- /.col-md-8 -->
+						<div class="col-md-4">
+							<div class="sidebar">
+								<!-- widget about -->
+								<div class="widget custom_widget_about">
+									<div class="widget-title">
+										<h5>ABOUT ME</h5>
+									</div>
+									<div class="widget-about-thumb text-center">
+											<img src="images/misc/2.png" alt="img" class="img-responsive">
+									</div>
+									<div class="widget-about-content text-center">
+										<h6>Hello, I’m  Jhon Doe</h6>
+										<p>
+											Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the 
+										</p>
+										<a href="#" class="read-more-btn">Learn More</a>
+									</div>
+								</div><!-- /.widget -->
+								<!-- widget social -->
+								<div class="widget widget_social">
+									<div class="widget-title">
+										<h5>CONNECT WITH</h5>
+									</div>
+									<ul class="inline-list">
+										<li>
+											<a href="#">
+												<div class="slide-content-area facebook-feed widget-feed">
+													<i class="fa fa-facebook" aria-hidden="true"></i>
+													<div class="slide-element facebook social-feed">
+														<h6>1002 Share</h6>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="slide-content-area twiteer-feed widget-feed">
+													<i class="fa fa-twitter" aria-hidden="true"></i>
+													<div class="slide-element twiteer social-feed">
+														<h6>1002 tweet</h6>
+													</div>
+												</div>
+											</a>
+											
+										</li>
+										<li>
+											<a href="#">
+												<div class="slide-content-area google-plus-feed widget-feed">
+													<i class="fa fa-google-plus" aria-hidden="true"></i>
+													<div class="slide-element google-plus social-feed">
+														<h6>1002 post</h6>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="slide-content-area pintarest-feed widget-feed">
+													<i class="fa fa-pinterest-p" aria-hidden="true"></i>
+													<div class="slide-element pinterest social-feed">
+														<h6>1002 pin</h6>
+													</div>
+												</div>
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												<div class="slide-content-area instagrem-feed widget-feed">
+													<i class="fa fa-instagram" aria-hidden="true"></i>
+													<div class="slide-element  instagrem social-feed">
+														<h6>1002 photos</h6>
+													</div>
+												</div>
+											</a>
+										</li>
+									</ul>
+								</div><!-- /.widget -->
+								<!-- widget categories -->
+								<div class="widget widget_categories">
+									<div class="widget-title">
+										<h5>CATEGORIES</h5>
+									</div>
+									<ul>
+										<li class="categorie-item">
+											<a href="#">Featured</a>
+											<span>15</span>
+											<div class="clearfix"></div>
+										</li>
+										<li class="categorie-item">
+											<a href="#">Life Style</a>
+											<span>09</span>
+											<div class="clearfix"></div>
+										</li>
+										<li class="categorie-item">
+											<a href="#">Music</a>
+											<span>20</span>
+											<div class="clearfix"></div>
+										</li>
+										<li class="categorie-item">
+											<a href="#">Travel</a>
+											<span>20</span>
+											<div class="clearfix"></div>
+										</li>
+										<li class="categorie-item last">
+											<a href="#">Sports</a>
+											<span>31</span>
+											<div class="clearfix"></div>
+										</li>
+									</ul>
+								</div><!-- /.widget -->
+								<!-- widget recent-stories -->
+								<div class="widget widget_recent_stories">
+									<div class="widget-title">
+										<h5>RECENT POST</h5>
+									</div>
+									<ul>
+										<li>
+											<div class="widget-img">
+												<a href="#">
+													<img src="images/thumbs/1.jpg" alt="image" />
+													<div class="widget-overlay"></div>
+													<i class="fa fa-search" aria-hidden="true"></i>
+												</a>
+											</div>
+											<div class="widget-content">
+												<h5><a href="#">Your Blog Title goes Here</a></h5>
+												<span>15 May, 2015</span>
+											</div>
+										</li>
+										<li>
+											<div class="widget-img">
+												<a href="#">
+													<img src="images/thumbs/2.jpg" alt="image" />
+													<div class="widget-overlay"></div>
+													<i class="fa fa-search" aria-hidden="true"></i>
+												</a>
+											</div>
+											<div class="widget-content">
+												<h5><a href="#">Something is Going Awesome</a></h5>
+												<span>09 Jan, 2016</span>
+											</div>
+										</li>
+										<li>
+											<div class="widget-img">
+												<a href="#">
+													<img src="images/thumbs/3.jpg" alt="image">
+													<div class="widget-overlay"></div>
+													<i class="fa fa-search" aria-hidden="true"></i>
+												</a>
+											</div>
+											<div class="widget-content">
+												<h5><a href="#">Spiter Looking Something</a></h5>
+												<span>26 Jan, 2016</span>
+											</div>
+										</li>
+									</ul>
+								</div><!-- /.widget -->
+								<!-- widget instagram -->
+								<div class="widget widget_instagram">
+									<div class="widget-title">
+										<h5>INSTAGRAM</h5>
+									</div>
+									<ul>
+										<li><a href="#"><img src="images/misc/3.jpg" alt="image"></a></li>
+										<li><a href="#"><img src="images/misc/4.jpg" alt="image"></a></li>
+										<li><a href="#"><img src="images/misc/5.jpg" alt="image"></a></li>
+										<li><a href="#"><img src="images/misc/6.jpg" alt="image"></a></li>
+										<li><a href="#"><img src="images/misc/7.jpg" alt="image"></a></li>
+										<li><a href="#"><img src="images/misc/8.jpg" alt="image"></a></li>
+									</ul>
+								</div>
+								<!-- widget tags -->
+								<div class="widget widget_tags last">
+									<div class="widget-title">
+										<h5>TAG CLOUD</h5>
+									</div>
+									<ul>
+										<li><a href="#">Fashion</a></li>
+										<li><a href="#">Blog</a></li>
+										<li><a href="#">Travel</a></li>
+										<li><a href="#">New</a></li>
+										<li><a href="#">Portfolio</a></li>
+										<li><a href="#">Template</a></li>
+									</ul>
+								</div>
+							</div>
+						</div><!-- /.col-md-4 -->
+					</div><!-- /.row -->
+				</div><!-- /.container -->
+			</div>
+		</div>
+		<!-- main-wrapper end -->
+		<footer>
+			<div class="footer-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="subscribe-form-area">
+								<form action="#" method="get" class="subscribe-form">
+									<div class="input-field text">
+										<span class="icon icon-User input-icon"></span>
+										<input type="text" name="name" placeholder="Jhon Doe">
+									</div>
+									<div class="input-field email">
+										<span class="icon icon-Mail input-icon"></span>
+										<input type="email" name="email" placeholder="Email">
+									</div>
+									<input type="submit" value="Subscribe Now">
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-5 col-sm-12">
+							<div class="footer-nav">
+								<nav>
+									<ul class="inline-list">
+										<li><a href="#">HOME</a></li>
+										<li><a href="#">FASHION</a></li>
+										<li><a href="#">BUSINESS</a></li>
+										<li><a href="#">SPORTS</a></li>
+										<li><a href="#">CONTACT</a></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+						<div class="col-md-2 col-sm-12">
+							<div class="footer-logo text-center">
+								<img src="images/misc/1.png" alt="img" class="img-responsive">
+							</div>
+						</div>
+						<div class="col-md-offset-2 col-md-3 col-sm-12">
+							<ul class="social-solid footer-social inline-list">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								<li><a href="#"><i class="fa fa-pinterest-p"></i></a></li>
+								<li><a href="#"><i class="fa fa-rss"></i></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<i class="fa fa-angle-double-up goto-btn" aria-hidden="true"></i>
+			</div><!-- /.footer-top -->
+			<div class="footer-bottom">
+				<div class="continer">
+					<div class="text-center copy-right-text">
+						<span>Copyright © 2016,<a href="#">Theme_Express</a>  All Rights Reseved.</span>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- script -->
+		<script src="{{ asset('bundles/chaoscompanyblog/assets/js/jquery-2.2.3.min.js') }}"></script>
+		<script src="{{ asset('bundles/chaoscompanyblog/assets/js/bootstrap.min.js') }}"></script>
+		<script src="{{ asset('bundles/chaoscompanyblog/assets/js/owl.carousel.min.js') }}"></script>
+		<script src="{{ asset('bundles/chaoscompanyblog/assets/js/jquery.magnific-popup.min.js') }}"></script>
+		<script src="{{ asset('bundles/chaoscompanyblog/assets/js/circle-progress.js') }}"></script>
+		<script src="{{ asset('bundles/chaoscompanyblog/assets/js/progressv-custom.js') }}"></script>
+		<script src="{{ asset('bundles/chaoscompanyblog/assets/js/masonry.pkgd.min.js') }}"></script>
+		<script src="{{ asset('bundles/chaoscompanyblog/assets/js/imagesloaded.pkgd.min.js') }}"></script>
+		
+		<!-- custom-file -->
+		<script src="{{ asset('bundles/chaoscompanyblog/assets/js/custom.js') }}"></script>
+	</body>
+</html>
